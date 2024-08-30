@@ -9,7 +9,6 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Search, Download } from 'lucide-react'
 import Image from 'next/image'
 
-// Dummy data - replace this with your JSON file later
 const projectsData = {
     "2022": [
         { id: 1, title: "AI-powered Campus Navigation System", description: "A mobile app using AI and AR for effortless campus navigation", students: "Alice Johnson, Bob Smith", supervisor: "Dr. Emily Brown", tags: ["AI", "AR", "Mobile App"] },
@@ -46,39 +45,43 @@ const ProjectShelf = () => {
     };
 
     return (
-        <div className="bg-white">
-            <div className="bg-orange-500 text-white p-8 mb-6 flex justify-between ">
-                <div className='bg-white rounded p-5'>
-                    <Image
-                        src="/header.png"
-                        width={300}
-                        height={300}
-                        alt="Picture of the author"
-                    />
+        <div className="bg-white min-h-screen">
+            <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-4 sm:p-8 mb-6">
+                <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between">
+                    <div className='bg-white rounded p-3 sm:p-5 mb-4 sm:mb-0'>
+                        <Image
+                            src="/header.png"
+                            width={300}
+                            height={300}
+                            alt="College logo"
+                            className="max-w-[150px] sm:max-w-[200px] h-auto"
+                        />
+                    </div>
+                    <div className="flex flex-col font-sans text-center sm:text-left">
+                        <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight mb-2">
+                            Computer Science and Engineering Projects
+                        </h1>
+                        <p className="text-lg sm:text-xl md:text-2xl font-light italic">
+                            Innovating for Tomorrow, Coding for the Future
+                        </p>
+                    </div>
                 </div>
-                <div className="flex flex-col font-sans justify-center items-center">
-                    <h1 className=" text-3xl font-extrabold tracking-tight lg:text-4xl ml-5 ">
-                        Computer Science and Engineering Projects
-                    </h1>
-                </div>
-
-
             </div>
 
-            <div className="container mx-auto p-4">
-                <Card className="mb-6 border-orange-500 border-t-4">
+            <div className="container mx-auto px-4">
+                <Card className="mb-6 border-orange-500 border-t-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <CardHeader>
-                        <CardTitle className="text-orange-500">Project Showcase</CardTitle>
+                        <CardTitle className="text-orange-500 text-2xl">Project Showcase</CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <p>Explore innovative projects from our talented Computer Science and Engineering students.</p>
+                        <p className="text-gray-600">Explore innovative projects from our talented Computer Science and Engineering students, pushing the boundaries of technology and creativity.</p>
                     </CardContent>
                 </Card>
 
-                <div className="flex justify-between items-center mb-4">
-                    <div className="flex items-center space-x-2">
+                <div className="flex flex-col sm:flex-row justify-between items-center mb-6 space-y-4 sm:space-y-0">
+                    <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-2 w-full sm:w-auto">
                         <Select onValueChange={setSelectedYear} defaultValue={selectedYear}>
-                            <SelectTrigger className="w-[180px] border-orange-500">
+                            <SelectTrigger className="w-full sm:w-[180px] border-orange-500">
                                 <SelectValue placeholder="Select Year" />
                             </SelectTrigger>
                             <SelectContent>
@@ -87,45 +90,51 @@ const ProjectShelf = () => {
                                 ))}
                             </SelectContent>
                         </Select>
-                        <div className="relative">
+                        <div className="relative w-full sm:w-auto">
                             <Search className="absolute left-2 top-2.5 h-4 w-4 text-orange-500" />
                             <Input
                                 placeholder="Search projects..."
-                                className="pl-8 border-orange-500"
+                                className="pl-8 border-orange-500 w-full"
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
                             />
                         </div>
                     </div>
-                    <Button onClick={handleDownload} className="bg-orange-500 hover:bg-orange-600">
+                    <Button onClick={handleDownload} className="bg-orange-500 hover:bg-orange-600 transition-colors duration-300 w-full sm:w-auto">
                         <Download className="mr-2 h-4 w-4" /> Download CSV
                     </Button>
                 </div>
 
-                <Table>
-                    <TableHeader>
-                        <TableRow className="bg-orange-100">
-                            <TableHead className="text-orange-700">Title</TableHead>
-                            <TableHead className="text-orange-700">Description</TableHead>
-                            <TableHead className="text-orange-700">Students</TableHead>
-                            <TableHead className="text-orange-700">Supervisor</TableHead>
-                            <TableHead className="text-orange-700">Tags</TableHead>
-                        </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                        {filteredProjects.map((project) => (
-                            <TableRow key={project.id} className="hover:bg-orange-50">
-                                <TableCell className="font-medium text-orange-700">{project.title}</TableCell>
-                                <TableCell>{project.description}</TableCell>
-                                <TableCell>{project.students}</TableCell>
-                                <TableCell>{project.supervisor}</TableCell>
-                                <TableCell>{project.tags.map(tag => (
-                                    <span key={tag} className="inline-block bg-orange-200 text-orange-700 rounded-full px-2 py-1 text-xs font-semibold mr-1 mb-1">{tag}</span>
-                                ))}</TableCell>
+                <div className="overflow-x-auto">
+                    <Table>
+                        <TableHeader>
+                            <TableRow className="bg-orange-100">
+                                <TableHead className="text-orange-700">Title</TableHead>
+                                <TableHead className="text-orange-700 hidden sm:table-cell">Description</TableHead>
+                                <TableHead className="text-orange-700">Students</TableHead>
+                                <TableHead className="text-orange-700 hidden md:table-cell">Supervisor</TableHead>
+                                <TableHead className="text-orange-700">Tags</TableHead>
                             </TableRow>
-                        ))}
-                    </TableBody>
-                </Table>
+                        </TableHeader>
+                        <TableBody>
+                            {filteredProjects.map((project) => (
+                                <TableRow key={project.id} className="hover:bg-orange-50 transition-colors duration-200">
+                                    <TableCell className="font-medium text-orange-700">{project.title}</TableCell>
+                                    <TableCell className="hidden sm:table-cell">{project.description}</TableCell>
+                                    <TableCell>{project.students}</TableCell>
+                                    <TableCell className="hidden md:table-cell">{project.supervisor}</TableCell>
+                                    <TableCell>
+                                        <div className="flex flex-wrap">
+                                            {project.tags.map(tag => (
+                                                <span key={tag} className="inline-block bg-orange-200 text-orange-700 rounded-full px-2 py-1 text-xs font-semibold mr-1 mb-1 transition-transform duration-200 hover:scale-105">{tag}</span>
+                                            ))}
+                                        </div>
+                                    </TableCell>
+                                </TableRow>
+                            ))}
+                        </TableBody>
+                    </Table>
+                </div>
             </div>
         </div>
     );
