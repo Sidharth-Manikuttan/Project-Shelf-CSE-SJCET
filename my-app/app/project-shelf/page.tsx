@@ -47,6 +47,7 @@ const ProjectShelf = () => {
     return (
         <div className="bg-white min-h-screen">
             <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-4 sm:p-8 mb-6">
+
                 <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between">
                     <div className='bg-white rounded p-5 sm:p-5 mb-4 sm:mb-0'>
                         <Image
