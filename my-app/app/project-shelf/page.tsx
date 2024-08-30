@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState, useEffect } from 'react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
@@ -5,6 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Search, Download } from 'lucide-react'
+import Image from 'next/image'
 
 // Dummy data - replace this with your JSON file later
 const projectsData = {
@@ -44,9 +47,22 @@ const ProjectShelf = () => {
 
     return (
         <div className="bg-white">
-            <div className="bg-orange-500 text-white p-8 mb-6">
-                <h1 className="text-4xl font-bold mb-2">Computer Science & Engineering Projects</h1>
-                <p className="text-xl">St. Joseph's College of Engineering and Technology</p>
+            <div className="bg-orange-500 text-white p-8 mb-6 flex justify-between ">
+                <div className='bg-white rounded p-5'>
+                    <Image
+                        src="/header.png"
+                        width={300}
+                        height={300}
+                        alt="Picture of the author"
+                    />
+                </div>
+                <div className="flex flex-col font-sans justify-center items-center">
+                    <h1 className=" text-3xl font-extrabold tracking-tight lg:text-4xl ml-5 ">
+                        Computer Science and Engineering Projects
+                    </h1>
+                </div>
+
+
             </div>
 
             <div className="container mx-auto p-4">
