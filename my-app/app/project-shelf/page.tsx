@@ -71,10 +71,10 @@ const ProjectShelf = () => {
             <div className="container mx-auto px-4">
                 <Card className="mb-6 border-orange-500 border-t-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <CardHeader>
-                        <CardTitle className="text-orange-500 text-2xl">Project Showcase</CardTitle>
+                        <CardTitle className="text-orange-500 scroll-m-20 text-2xl font-semibold tracking-tight">Project Showcase</CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <p className="text-gray-600">Explore innovative projects from our talented Computer Science and Engineering students, pushing the boundaries of technology and creativity.</p>
+                        <p className="text-gray-600 leading-7 [&:not(:first-child)]:mt-6">Explore innovative projects from our talented Computer Science and Engineering students, pushing the boundaries of technology and creativity.</p>
                     </CardContent>
                 </Card>
 
