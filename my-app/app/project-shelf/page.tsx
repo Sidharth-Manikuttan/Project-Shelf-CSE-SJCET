@@ -19,7 +19,7 @@ const projectsData = {
         { id: 4, title: "Quantum-Resistant Cryptography Implementation", description: "Developing and implementing post-quantum cryptographic algorithms", students: "Grace Lee, Henry Martinez", supervisor: "Prof. Robert Black", tags: ["Cryptography", "Quantum Computing", "Security"] },
     ],
     "2024": [
-        { id: 5, title: "Edge AI for IoT Devices", description: "Implementing AI algorithms on edge devices for real-time processing", students: "Ivy Chen, Jack Thompson", supervisor: "Dr. Lisa Gray", tags: ["AI", "IoT", "Edge Computing"] },
+        { id: 5, title: "Currently", description: "A Household electricty consumption monitoring solution", students: "Kiran Babu,Indrajith S Nair,Sidharth Manikuttan,Anit Thomas", supervisor: "Prof. Jikku Thomas", tags: ["IoT", "App Development", "FireBase", "Reat Native"] },
         { id: 6, title: "Natural Language Processing for Regional Languages", description: "Developing NLP models for Indian regional languages", students: "Kate Patel, Liam O'Connor", supervisor: "Prof. Daniel Green", tags: ["NLP", "Machine Learning", "Linguistics"] },
     ],
 };
@@ -40,7 +40,7 @@ const ProjectShelf = () => {
     }, [selectedYear, searchTerm]);
 
     const handleDownload = () => {
-        // Implement CSV download functionality here
+
         console.log("Downloading CSV...");
     };
 
@@ -51,7 +51,7 @@ const ProjectShelf = () => {
                     <div className='bg-white rounded p-3 sm:p-5 mb-4 sm:mb-0'>
                         <Image
                             src="/header.png"
-                            width={300}
+                            width={400}
                             height={300}
                             alt="College logo"
                             className="max-w-[150px] sm:max-w-[200px] h-auto"
