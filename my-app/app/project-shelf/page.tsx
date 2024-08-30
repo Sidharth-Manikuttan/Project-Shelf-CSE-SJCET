@@ -19,8 +19,8 @@ const projectsData = {
         { id: 4, title: "Quantum-Resistant Cryptography Implementation", description: "Developing and implementing post-quantum cryptographic algorithms", students: "Grace Lee, Henry Martinez", supervisor: "Prof. Robert Black", tags: ["Cryptography", "Quantum Computing", "Security"] },
     ],
     "2024": [
-        { id: 5, title: "Currently", description: "A Household electricty consumption monitoring solution", students: "Kiran Babu,Indrajith S Nair,Sidharth Manikuttan,Anit Thomas", supervisor: "Prof. Jikku Thomas", tags: ["IoT", "App Development", "FireBase", "Reat Native"] },
-        { id: 6, title: "Natural Language Processing for Regional Languages", description: "Developing NLP models for Indian regional languages", students: "Kate Patel, Liam O'Connor", supervisor: "Prof. Daniel Green", tags: ["NLP", "Machine Learning", "Linguistics"] },
+        { id: 5, title: "Currently", description: "A Household electricty consumption monitoring solution", students: "Kiran Babu,Indrajith S Nair,Sidharth Manikuttan,Anit Thomas", supervisor: "Prof. Jikku Thomas", tags: ["IoT", "App Development", "FireBase", "React Native"] },
+        { id: 6, title: "EduNet", description: "Professional Networking and Event Engagement App for Students and Alumni", students: "Kennith Joseph, Amiya Hidayathulla,Melby Mariam Chandy,Akshay CA", supervisor: "Prof. Smitha Jacob", tags: ["Flutter", "App Development", "REST API"] },
     ],
 };
 
@@ -48,13 +48,13 @@ const ProjectShelf = () => {
         <div className="bg-white min-h-screen">
             <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-4 sm:p-8 mb-6">
                 <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between">
-                    <div className='bg-white rounded p-3 sm:p-5 mb-4 sm:mb-0'>
+                    <div className='bg-white rounded p-5 sm:p-5 mb-4 sm:mb-0'>
                         <Image
                             src="/header.png"
                             width={400}
-                            height={300}
+                            height={400}
                             alt="College logo"
-                            className="max-w-[150px] sm:max-w-[200px] h-auto"
+                            className="max-w-[180px] sm:max-w-[200px] h-auto"
                         />
                     </div>
                     <div className="flex flex-col font-sans text-center sm:text-left">
