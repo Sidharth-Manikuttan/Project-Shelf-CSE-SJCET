@@ -11,7 +11,6 @@ import Image from 'next/image'
 import projectsData from "@/app/project-shelf/projects"
 
 
-
 const ProjectShelf = () => {
     const [selectedYear, setSelectedYear] = useState<string>("2024");
     const [searchTerm, setSearchTerm] = useState<string>("");
