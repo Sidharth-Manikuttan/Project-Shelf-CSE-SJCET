@@ -122,9 +122,9 @@ const ProjectShelf = () => {
                     <TableHeader>
                         <TableRow className="bg-orange-100">
                             <TableHead className="text-orange-700">Title</TableHead>
-                            <TableHead className="text-orange-700">Description</TableHead>
+                            <TableHead className="text-orange-700 ">Description</TableHead>
                             <TableHead className="text-orange-700">Students</TableHead>
-                            <TableHead className="text-orange-700">Supervisor</TableHead>
+                            <TableHead className="text-orange-700 ">Supervisor</TableHead>
                             <TableHead className="text-orange-700">Tags</TableHead>
                         </TableRow>
                     </TableHeader>
