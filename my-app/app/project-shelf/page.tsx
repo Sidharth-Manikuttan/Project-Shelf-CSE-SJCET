@@ -27,14 +27,40 @@ const ProjectShelf = () => {
     }, [selectedYear, searchTerm]);
 
     const handleDownload = () => {
-        console.log("Downloading CSV...");
+        // Generate CSV content
+        const headers = ["Title", "Description", "Students", "Supervisor", "Tags"];
+        const csvContent = [
+            headers.join(","),
+            ...filteredProjects.map(project => [
+                `"${project.title}"`,
+                `"${project.description}"`,
+                `"${project.students}"`,
+                `"${project.supervisor}"`,
+                `"${project.tags.join(', ')}"`
+            ].join(","))
+        ].join("\n");
+
+        // Create a Blob with the CSV content
+        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+
+        // Create a download link and trigger the download
+        const link = document.createElement("a");
+        if (link.download !== undefined) {
+            const url = URL.createObjectURL(blob);
+            link.setAttribute("href", url);
+            link.setAttribute("download", `projects_${selectedYear}.csv`);
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
     };
 
     return (
         <div className="bg-white min-h-screen flex flex-col">
             <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-4 sm:p-8">
                 <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between">
-                    <div className='bg-white rounded p-5 sm:p-5 mb-4 sm:mb-0'>
+                    <div className='bg-white rounded  p-4 sm:p-5 mb-4 sm:mb-0'>
                         <Image
                             src="/header.png"
                             width={400}
@@ -57,7 +83,7 @@ const ProjectShelf = () => {
             <div className="container mx-auto px-4 flex-grow">
                 <Card className="my-6 border-orange-500 border-t-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <CardHeader>
-                        <CardTitle className="text-orange-500 scroll-m-20 text-2xl font-semibold tracking-tight">Project Showcase</CardTitle>
+                        <CardTitle className="text-orange-500 scroll-m-20 font-sans text-2xl font-semibold tracking-tight">Project Showcase</CardTitle>
                     </CardHeader>
                     <CardContent>
                         <p className="text-gray-600 leading-7 [&:not(:first-child)]:mt-6">Explore innovative projects from our talented Computer Science and Engineering students, pushing the boundaries of technology and creativity.</p>
