@@ -8,21 +8,9 @@ import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Search, Download } from 'lucide-react'
 import Image from 'next/image'
+import projectsData from "@/app/project-shelf/projects"
 
-const projectsData = {
-    "2022": [
-        { id: 1, title: "AI-powered Campus Navigation System", description: "A mobile app using AI and AR for effortless campus navigation", students: "Alice Johnson, Bob Smith", supervisor: "Dr. Emily Brown", tags: ["AI", "AR", "Mobile App"] },
-        { id: 2, title: "Blockchain-based Academic Credential Verification", description: "Secure and transparent system for verifying academic credentials", students: "Charlie Davis, David Wilson", supervisor: "Prof. Michael Green", tags: ["Blockchain", "Security", "Web Development"] },
-    ],
-    "2023": [
-        { id: 3, title: "AI-Enhanced Learning Management System", description: "Personalized learning platform with AI-driven content recommendations", students: "Eve Taylor, Frank Anderson", supervisor: "Dr. Sarah White", tags: ["AI", "Education Tech", "Web Development"] },
-        { id: 4, title: "Quantum-Resistant Cryptography Implementation", description: "Developing and implementing post-quantum cryptographic algorithms", students: "Grace Lee, Henry Martinez", supervisor: "Prof. Robert Black", tags: ["Cryptography", "Quantum Computing", "Security"] },
-    ],
-    "2024": [
-        { id: 5, title: "Currently", description: "A Household electricty consumption monitoring solution", students: "Kiran Babu,Indrajith S Nair,Sidharth Manikuttan,Anit Thomas", supervisor: "Prof. Jikku Thomas", tags: ["IoT", "App Development", "FireBase", "React Native"] },
-        { id: 6, title: "EduNet", description: "Professional Networking and Event Engagement App for Students and Alumni", students: "Kennith Joseph, Amiya Hidayathulla,Melby Mariam Chandy,Akshay CA", supervisor: "Prof. Smitha Jacob", tags: ["Flutter", "App Development", "REST API"] },
-    ],
-};
+
 
 const ProjectShelf = () => {
     const [selectedYear, setSelectedYear] = useState<string>("2024");
