@@ -4,7 +4,7 @@ const projectsData = {
         {
             id: 1,
             title: "Smart Aquaculture",
-            description: "An IOT-based system for intelligent remote control and management of fishpond equipment, promoting professional aquaculture and lowering entry barriers.",
+            description: "An AIOT-based system for intelligent remote control and management of fishpond equipment, promoting professional aquaculture and lowering entry barriers.",
             students: "AADIT V BIJU, AJO THOMAS, ALVIN VARGHESE, LLOYD SIBI",
             supervisor: "Prof. Smitha Jacob",
             tags: ["AIOT", "Aquaculture", "Remote Management"]
