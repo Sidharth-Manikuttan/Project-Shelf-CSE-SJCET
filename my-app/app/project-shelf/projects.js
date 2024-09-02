@@ -20,7 +20,7 @@ const projectsData = {
         {
             id: 3,
             title: "AquaRover",
-            description: "Automated flood rescue boat.",
+            description: "An Automated flood rescue boat.",
             students: "AKASH VIJAY, JOHNS RAJU, JOSE K JAMES, TOMIN JOY",
             supervisor: "Prof. Sarju S",
             tags: ["Automation", "Flood Rescue", "Robotics"]
