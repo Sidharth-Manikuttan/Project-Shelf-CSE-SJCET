@@ -12,7 +12,7 @@ const projectsData = {
         {
             id: 2,
             title: "TechSow",
-            description: "Innovative agricultural system with a smart robot for soil and crop monitoring using AI, weather data, and a mobile app to improve farming efficiency.",
+            description: "An Innovative agricultural system with a smart robot for soil and crop monitoring using AI, weather data, and a mobile app to improve farming efficiency.",
             students: "AFNA AYSHU JAFFIN, JUNA TERES MARTIN, NIMITHA JOY, RESE RAJU",
             supervisor: "Prof. Divya Sunny",
             tags: ["Agriculture", "Robotics", "AI", "Soil Monitoring"]
@@ -20,7 +20,7 @@ const projectsData = {
         {
             id: 3,
             title: "AquaRover",
-            description: "An Automated flood rescue boat.",
+            description: "An Automated flood rescue boat leveraging IoT",
             students: "AKASH VIJAY, JOHNS RAJU, JOSE K JAMES, TOMIN JOY",
             supervisor: "Prof. Sarju S",
             tags: ["Automation", "Flood Rescue", "Robotics"]
