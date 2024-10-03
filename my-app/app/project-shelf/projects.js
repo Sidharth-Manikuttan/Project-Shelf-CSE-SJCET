@@ -205,7 +205,14 @@ const projectsData = {
         { id: 18, title: "SmartHire", description: "A Resume based shortlisting software for companies", students: "Shifaz Abdul Kareem,Sarun Siby,Tobin Thomas,Abin Mathew Siby", supervisor: "Prof.Thushara Sukumar", tags: ["Web", "HTML", "CSS"] },
         { id: 19, title: "WorkEase", description: "Not Available", students: "Aayush.G,Devamanas S.S,Dona Sosa Joe", supervisor: "Prof.Dona Mary Cherian", tags: ["HTML", "CSS"] },
         { id: 20, title: "On-spot Mechanic", description: "A platform to bring mechanic services to users upon emergency situations based on their gps location.", students: "Sanjid S,Edwin Rajesh,Ajay Cyriac,Jithmon P Cherian", supervisor: "Prof.Jibin Philip", tags: ["Flutter", "Google Maps services", "Firebase"] },
-        { id: 21, title: "Foodie Buddy", description: "A Recipe App", students: "Niketh A,Abin Varghese,Mathew Raino", supervisor: "Prof.Smitha Jacob", tags: ["Flutter", "Firebase"] }
+        { id: 21, title: "Foodie Buddy", description: "A Recipe App", students: "Niketh A,Abin Varghese,Mathew Raino", supervisor: "Prof.Smitha Jacob", tags: ["Flutter", "Firebase"] },
+        
+       { id: 22, title: "Servelink", description: "Empowering Communities through Volunteering", students: "Navaneeth Krishna,Naveen Alex,Nevin M Noby,Sreelakshmi Biju", supervisor: "Prof.Gayathri Krishna", tags: ["ReactJs", "NodeJs","MinIO","MongoDB"] },
+       { id: 23, title: "Adcolumn", description: "This website allows users to book slots in newspapers for advertising purposes", students: "Abin Mathew Sunny,Allen K Philip,Athul Sabu,Aravind Prakash", supervisor: "Prof.Athirasree Das", tags: ["Html/css","Nodejs","MongoDB","Stripe"] },
+       { id: 24, title: "Flexilink", description: " It offers the ultimate freedom and flexibility for fitness enthusiasts", students: "Abhiram S,Albin Shaju,Anish V Mathew,Alen P Aji,", supervisor: "Prof.Athirasree Das", tags: ["Html/Css","MongoDB","Stripe","Ajax"] }
+       
+
+
     ]
 };
 
